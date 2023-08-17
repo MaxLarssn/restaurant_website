@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Webbprojekt</title>
+    <meta charset="UTF-8" />
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet" />
+
+    <script src="../JS/index.js" type="module"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="booking.html">Book Table</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <img src='../images/Wine.png' alt='Wine in front of open fire'>
+
+        <div class="color-box-newsletter">
+            <h1 id="h1_newsletter">Join Our Newsletter</h1>
+
+            <form onsubmit="toastFunction(); return false">
+
+                <h2 id="h2-newsletter">Email</h2>
+                <input type="text" name="email" id="Email" required>
+
+                <script>
+                    function toastFunction() {
+                        var x = document.getElementById("toast");
+                        x.className = "show";
+                        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+                    }
+
+                </script>
+
+
+                <input type="submit" id="Submit-newsletter" value="Sign Up">
+
+                <script>
+                    function newsletterFunction() {
+                        var x = document.getElementById("toast");
+                        x.className = "show";
+                        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+                    }
+                </script>
+
+                <div id="toast">
+                    <div class="checkicon"> <i class="fas fa-check-square"></i> </div>
+                    Du har nu registrerat dig!
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>

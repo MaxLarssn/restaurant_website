@@ -1,0 +1,496 @@
+@font-face {
+    font-family: "Vollkorn";
+    src: url(fonts/Vollkorn/static/Vollkorn-Regular.ttf)
+}
+
+@font-face {
+    font-family: "Hatton";
+    src: url(fonts/hatton-font-family/PP\ Hatton\ Ultralight\ 200.otf)
+}
+
+@font-face {
+    font-family: "Fat-Hatton";
+    src: url(fonts/hatton-font-family/PP\ Hatton\ Medium\ 500.otf)
+}
+
+/* Generella regler */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+#copyright,
+table th,
+.heading {
+    font-family: "Hatton, Helvetica, sans-serif";
+    font-weight: 900;
+    letter-spacing: 0.075em;
+}
+
+img {
+    border: 0;
+    width: 92rem;
+
+}
+
+/* Nav */
+
+nav {
+    z-index: 10;
+    position: absolute;
+    margin-top: 0.5rem;
+    font-size: 110%;
+}
+
+nav ul {
+    font-family: "Vollkorn";
+    letter-spacing: 0.075em;
+    word-spacing: 6px;
+    font-size: 120%;
+
+    text-transform: uppercase;
+    display: flex;
+}
+
+nav ul li a {
+    padding: 0 2rem;
+    color: #F2F4EA;
+    text-decoration: none;
+}
+
+/* index page */
+header {
+    z-index: 10;
+    position: relative;
+    margin-top: -36rem;
+    margin-left: 10%;
+
+    color: #F2F4EA;
+}
+
+#container>header>h1 {
+    font-family: "Hatton";
+    font-size: 650%;
+}
+
+
+/* booking page */
+
+.headerBooking {
+    z-index: 10;
+    position: relative;
+    margin-top: -32rem;
+    margin-left: 9%;
+    font-size: 600%;
+    color: #F2F4EA;
+    font-family: "Hatton";
+}
+
+.color-box-booking {
+    position: relative;
+    background-color: #1E1F20;
+    width: 500px;
+    height: 600px;
+    margin-left: 59%;
+    margin-top: -18rem;
+    border-radius: 20px;
+}
+
+h2 {
+    color: #F2F4EA;
+    margin-left: 15%;
+    padding-top: 25px;
+    font-size: 120%;
+    font-family: "Vollkorn";
+}
+
+#Persons {
+    margin-top: 5px;
+    margin-left: 15%;
+    font-size: 110%;
+    width: 10%;
+    border: none;
+}
+
+#FirstName,
+#LastName,
+#Phone,
+#Date,
+#Time,
+#Submit {
+    z-index: 20;
+    position: relative;
+    margin-top: 5px;
+    margin-left: 15.5%;
+    width: 30%;
+    font-size: 110%;
+    border: none;
+    border-radius: 2px;
+}
+
+#Date {
+    font-size: 130%;
+}
+
+#Time {
+    width: 15%;
+}
+
+#Submit {
+    margin-top: 30px;
+    width: 25%;
+    font-size: 140%;
+}
+
+/* popup */
+
+.center {
+    text-align: center;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    border: none;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: orange;
+    color: white;
+}
+
+#toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -200px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 16px;
+    font-family: "Vollkorn";
+}
+
+#toast.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+
+/* menu */
+
+.color-box-menu {
+    position: relative;
+    background-color: #1E1F20;
+    width: 800px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -37.7rem;
+    border-radius: 20px;
+}
+
+#h1-menu {
+    color: #F2F4EA;
+    text-align: center;
+
+    padding-top: 20px;
+    font-size: 400%;
+    font-family: "Hatton";
+}
+
+.h2-menu {
+    color: #F2F4EA;
+
+    text-align: center;
+    margin-right: 15%;
+
+    padding-top: 25px;
+    font-size: 200%;
+    font-family: "Vollkorn";
+}
+
+#p-menu {
+    color: #F2F4EA;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 120%;
+    font-family: "Hatton";
+}
+
+.p-menu {
+    color: #F2F4EA;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 120%;
+    font-family: "Hatton";
+}
+
+/* newsletter */
+
+.color-box-newsletter {
+    position: relative;
+    background-color: #1E1F20;
+    width: 600px;
+    height: 400px;
+    margin-left: 5%;
+    margin-top: -37.7rem;
+    border-radius: 20px;
+}
+
+#h1_newsletter {
+    color: #F2F4EA;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    max-width: 50%;
+    font-size: 300%;
+    font-family: "Hatton";
+}
+
+#h2-newsletter {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    font-size: 175%;
+}
+
+#Email {
+    margin-left: 29%;
+    width: 40%;
+    font-size: 140%;
+    border: none;
+    border-radius: 2px;
+}
+
+#Submit-newsletter {
+    z-index: 20;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 34.5%;
+    width: 30%;
+    font-size: 110%;
+    border: none;
+    border-radius: 5px;
+    font-size: 200%;
+}
+
+
+/* contact */
+
+.color-box-contact {
+    position: relative;
+    background-color: #1E1F20;
+    width: 600px;
+    height: 400px;
+    margin-left: 50%;
+    margin-top: -37.7rem;
+    border-radius: 20px;
+}
+
+#h1_contact {
+    color: #F2F4EA;
+    margin-left: 10%;
+    padding-top: 20px;
+    font-size: 300%;
+    font-family: "Hatton";
+}
+
+.h2-contact {
+    color: #F2F4EA;
+
+    margin-left: 10.5%;
+    margin-right: 15%;
+
+    padding-top: 25px;
+    font-size: 150%;
+    font-family: "Vollkorn";
+}
+
+.p-contact {
+    color: #F2F4EA;
+    margin-left: 11%;
+    padding-top: 15px;
+    font-size: 120%;
+    font-family: "Hatton";
+}
+
+
+@media(min-width:770px) and (max-width: 1025px) {
+
+    nav ul {
+        font-size: 150%;
+    }
+
+    nav ul li a {
+        padding: 0 1rem;
+    }
+
+    .headerBooking {
+        z-index: 10;
+        position: relative;
+        margin-top: -32rem;
+        margin-left: 5%;
+        font-size: 600%;
+        color: #F2F4EA;
+        font-family: "Hatton";
+    }
+
+    .color-box-booking {
+        width: 400px;
+        height: 550px;
+        margin-top: -14rem;
+    }
+
+    h2 {
+        padding-top: 25px;
+        font-size: 140%;
+    }
+
+    #FirstName,
+    #LastName,
+    #Phone,
+    #Date,
+    #Time,
+    #Submit {
+        font-size: 140%;
+        height: 110%;
+        width: 35%;
+    }
+
+    #Time {
+        width: 19%;
+    }
+
+    #Submit {
+        width: 28%;
+    }
+
+
+    .color-box-menu {
+        height: 700px;
+        margin-top: -45rem;
+    }
+
+    #h1-menu {
+        font-size: 450%;
+
+    }
+
+    #h2-menu {
+        padding-top: 20px;
+        font-size: 250%;
+
+    }
+
+    #p-menu {
+        font-size: 170%;
+    }
+
+    #h2-newsletter {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 30px;
+        font-size: 300%;
+    }
+
+    #Email {
+        margin-left: 24%;
+        width: 50%;
+        font-size: 175%;
+        margin-top: 10px;
+    }
+
+
+
+    .color-box-contact {
+        height: 450px;
+        margin-left: 37.5%;
+        margin-top: -40rem;
+    }
+
+    #h1_contact {
+        font-size: 350%;
+    }
+
+    #h2-contact {
+        font-size: 200%;
+    }
+
+    #p-contact {
+        font-size: 175%;
+    }
+
+}

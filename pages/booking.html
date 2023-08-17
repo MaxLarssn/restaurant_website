@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Webbprojekt</title>
+    <meta charset="UTF-8" />
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet" />
+
+    <script src="../JS/second.js" type="module"></script>
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="">Book Table</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <img src='../images/Pasta.png' alt='Pasta with parmesan in a skillet'>
+
+
+        <header class="headerBooking">
+            Book A Table
+        </header>
+
+        <div class="color-box-booking">
+            <form onsubmit="toastFunction(); return false">
+
+                <h2>Guest's</h2>
+                <select name="persons" id="Persons">
+                    <option value="one">1</option>
+                    <option value="two">2</option>
+                    <option value="three">3</option>
+                    <option value="four">4</option>
+                    <option value="five">5</option>
+                    <option value="six">6</option>
+                </select>
+
+                <h2>First name</h2>
+                <input type="text" name="firstname" id="FirstName" required>
+
+                <h2>Last name</h2>
+                <input type="text" name="lastname" id="LastName" required>
+
+                <h2>Phone number</h2>
+                <input type="text" name="phone" id="Phone" required>
+
+                <h2>Date</h2>
+
+                <input type="date" min="2023-07-20" name="date" id="Date" required>
+
+
+                <h2>Time</h2>
+                <select name="time" id="Time" required>
+                    <option value="">17:00</option>
+                    <option value="">18:00</option>
+                    <option value="">19:00</option>
+                    <option value="">20:00</option>
+                    <option value="">21:00</option>
+                </select>
+
+                <p>
+                    <input type="submit" id="Submit" value="Book table">
+                </p>
+
+                <script>
+                    function toastFunction() {
+                        var x = document.getElementById("toast");
+                        x.className = "show";
+                        setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+                    }
+                </script>
+
+                <div id="toast">
+                    <div class="checkicon"> <i class="fas fa-check-square"></i> </div>
+                    Tack, vi har tagit emot din reservation!
+                </div>
+
+
+
+
+
+
+            </form>
+
+        </div>
+
+
+
+
+
+    </div>
+</body>
+
+</html>
